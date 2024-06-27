@@ -1,0 +1,49 @@
+{% extends 'base1.html' %}
+
+{% block content %}
+<!-- Main Content -->
+<div class="container mt-4">
+    <div class="row">
+        <!-- Product Detail -->
+        <div class="col-md-9">
+            <!-- Product Detail Content -->
+            <div class="product-detail">
+                <div class="row">
+                    <!-- Product Image -->
+                    <div class="col-md-6">
+                        <img src="https://example.com/product-image.jpg" alt="Product Image" class="img-fluid">
+                    </div>
+                    <!-- Product Information -->
+                    <div class="col-md-6">
+                        <h2>Rosca T-shirt</h2>
+                        <p>Availability: In stock</p>
+                        <p>SKU: VELA_SKU_30</p>
+                        <p>Price: ₹19.99</p>
+                        <p>Size & Fit: Fit: Classic — follows your contours with a little room</p>
+                        <p>Length: Mid-calf</p>
+                        <p>Model is 5'9.5/176 wearing a size S</p>
+                        <p>Materials & Care: Content: 100% polyester Care: Hand wash cold</p>
+                        <p>Quantity: <input type="number" value="1" min="1"></p>
+                        <button class="btn btn-primary" onclick="addToCart()">Add to Cart</button>
+                        <p>Free shipping on all orders over ₹200</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    // Function to add product to cart
+    function addToCart() {
+        const productName = 'Rosca T-shirt'; // Replace with actual product name
+        const quantity = parseInt(document.querySelector('.product-detail input[type="number"]').value);
+        console.log('Adding to cart:', productName, 'Quantity:', quantity);
+        // Implement your cart logic here (e.g., update cart UI, store in localStorage, etc.)
+    }
+</script>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'base1.html' %}
+
+{% block content %}
+<h1 class="para2">Shopping Cart</h1>
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>SI NO</th>
+                <th>PRODUCT</th>
+                <th>NAME</th>
+                <th>QUANTITY</th>
+                <th>PRICE</th>
+                <th>ACTIONS</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in cart_item %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td><img src="{{ item.productz.image.url }}" height="100px"></td>
+                <td>{{ item.productz.pname }}</td>
+                <td>{{ item.quantity }}</td>
+                <td>₹{{ item.productz.price }}</td>
+                <td><a href="{% url 'remove_from_cart' item.id %}">Remove</a></td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="6">Your cart is empty.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="container12">
+        <p>Total Price: ₹{{ total_price }}</p>
+        <a href="{% url 'view_cart' %}">Continue Shopping</a>
+    </div>
+    <a href="/process_payment" class="checkout-button">Proceed to Checkout</a>
+</div>
+{% endblock %}

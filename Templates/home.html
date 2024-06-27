@@ -1,0 +1,680 @@
+{% extends 'base1.html' %}
+
+{% block content %}
+
+{% load static %}
+<!-- Carousel -->
+
+<style>
+  
+.carousel-item {
+            background-color: rgba(213, 142, 9, 0.612);
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .carousel-item img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .carousel-caption {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+        }
+        .carousel-caption h1 {
+            font-size: 3rem;
+        }
+        .carousel-caption p {
+            font-size: 1.5rem;
+        }
+        .btn-discover {
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .btn-discover:hover {
+            background-color: red;
+            color: white;
+        }
+.content-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 70px;
+}
+
+.left-side {
+  flex: 1 1 50%;
+  padding: 10px;
+}
+.content-container {
+    display: flex;
+  }
+
+  
+.carousel-inner img {
+    object-fit: cover;
+    
+}
+
+
+.heading-center {
+      text-align: center;
+      margin: 20px 0;
+    }
+.scroll-container {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+        .scroll-content {
+            display: flex;
+            transition: transform 0.5s linear;
+        }
+        .image-container {
+            display: inline-block;
+            position: relative;
+            margin: 10px;
+        }
+        .image-container img {
+            width: 310px;
+            height: 250px;
+            cursor: pointer;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .image-container:hover .overlay {
+            opacity: 1;
+        }
+        .overlay-content {
+            text-align: center;
+        }
+        .overlay-content .fa-eye {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+        .overlay-content .btn {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .overlay-content .btn:hover {
+            background-color: #ff4500;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal-content {
+            background-color: #fff;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    .product-details {
+      text-align: center;
+    }
+
+    .product-details h2 {
+      margin-bottom: 10px;
+    }
+
+    .product-details p {
+      line-height: 1.6;
+    }
+.discover-button {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .discover-button button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #fbfdfe;
+        color: black;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border: 2px solid black;
+
+    }
+    .discover-button button:hover {
+        background-color: black;
+        color: white;
+    }
+    .image-container1 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Adjust as needed */
+  }
+
+  .image-container1 img {
+    max-width: calc(33.33% - 5px); /* Adjusted to accommodate gap */
+    height: auto;
+    margin-right: 5px; /* Adding a small gap between images */
+  }
+
+  .image-container1 img:last-child {
+    margin-right: 0; /* No gap after the last image */
+  }
+
+/* Style the container for logos */
+.logo-list__content {
+    padding: 20px; /* Adjust as needed */
+}
+
+/* Style individual logo items */
+.logo-list-item {
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+.logo-list-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Style the heading */
+.logo-list__heading {
+    color: #333; /* Adjust color as needed */
+    font-size: 24px; /* Adjust font size as needed */
+    margin-bottom: 20px; /* Adjust spacing as needed */
+}
+
+/* Style the link */
+.logo-list__link {
+    color: #007bff; /* Adjust link color as needed */
+    text-decoration: none;
+}
+
+.logo-list__link:hover {
+    text-decoration: underline;
+}
+.carousel-gap {
+  margin-bottom: 30px; /* Adjust the margin as needed */
+}
+.heading-gap{
+  margin-bottom: 30px;
+}
+.image-with-text {
+  overflow: hidden;
+}
+
+.image-with-text__inner {
+  padding-top: 5rem; /* Adjust as needed */
+  padding-bottom: 5rem; /* Adjust as needed */
+}
+
+.image-with-text-content {
+  text-align: center;
+}
+
+.image-with-text__text--1 {
+  font-size: 2rem;
+  /* Add additional styling as needed */
+}
+
+.image-with-text__text--2 {
+  font-size: 2rem;
+  /* Add additional styling as needed */
+}
+
+.image-with-text__text--4 {
+  max-width: 580px;
+  margin: 0 auto;
+  /* Add additional styling as needed */
+}
+
+.image-with-text__btn--5,
+.image-with-text__btn--6 {
+  margin-top: 1rem; /* Adjust as needed */
+  font-size: 1rem; /* Adjust as needed */
+  padding: 0.5rem 1rem; /* Adjust as needed */
+  border: 2px solid;
+  /* Add additional styling as needed */
+}
+.parent-box {
+  white-space: nowrap; /* Prevents wrapping */
+  overflow-x: auto; /* Enables horizontal scrolling */
+}
+
+.boxs {
+  display: inline-block; /* Display as inline blocks */
+  margin-right: 10px; /* Margin between each video */
+  vertical-align: top; /* Align videos to the top */
+  white-space: normal; /* Reset white space */
+}
+
+.boxs iframe {
+  width: 290px; /* Width of each video */
+  height: 300px; /* Height of each video */
+}
+
+/* Optional: Adjust iframe size for smaller screens */
+@media (max-width: 768px) {
+  .boxs iframe {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+</style>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+      <div class="carousel-item active">
+          <img src="https://i.pinimg.com/564x/53/01/5e/53015e9cb1eb8549cf6297520bff852e.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption">
+              <h1>Fashion Faded</h1>
+              <p>What's New Today</p>
+              <button class="btn-discover" onclick="location.href='/shop'">Shop Now</button>
+            </div>
+      </div>
+      <div class="carousel-item">
+          <img src="https://i.pinimg.com/564x/22/62/df/2262dfcc1261fbc40055290278fdcbe2.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption">
+              <h1>Fashion Faded</h1>
+              <p>What's New Today</p>
+              <button class="btn-discover" onclick="location.href='shop/'">Shop Now</button>
+            </div>
+      </div>
+      <div class="carousel-item">
+          <img src="https://i.pinimg.com/564x/22/62/df/2262dfcc1261fbc40055290278fdcbe2.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption">
+              <h1>Fashion Faded</h1>
+              <p>What's New Today</p>
+              <button class="btn-discover" onclick="location.href='shop/'">Shop Now</button>
+            </div>
+      </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+  </a>
+</div>
+<div class="carousel-gap"></div>
+
+<div class="Framework">
+  <div class="" style="background-color: #f7f7f7; margin: 0 0 60px;">
+      <div class="container">
+          <div class="">
+              <div class="row">
+                  <div class="col-12 col-lg-6">
+                      <div class="logo-list__box-heading px-lg-5 mx-auto mx-lg-3 mb-4 mb-lg-0">
+                          <h3 class="logo-list__heading mb-0 mb-lg-4">
+                              <span>We’re proud to be partners of famous brands as</span>
+                          </h3>
+                          <a class="logo-list__link text-uppercase" href="/collections">
+                              View all brands
+                              <svg class="icon icon-arrow" width="14" viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor" />
+                              </svg>
+                          </a>
+                      </div>
+                  </div>
+                  <div class="vela-section__content col-12 col-lg-6">
+                      <div class="row g-0 row-cols-3 row-cols-ms-3 row-cols-md-3 row-cols-lg-3">
+                          <div class="col border-end">
+                              <div class="logo-list-item position-relative d-flex justify-content-center py-3 py-sm-4 py-lg-5">
+                                  <img src="logo1.png" alt="Logo 1" style="max-width: 100%; height: auto;">
+                              </div>
+                          </div>
+                          <div class="col border-end">
+                              <div class="logo-list-item position-relative d-flex justify-content-center py-3 py-sm-4 py-lg-5">
+                                  <img src="logo2.png" alt="Logo 2" style="max-width: 100%; height: auto;">
+                              </div>
+                          </div>
+                          <!-- Add more logo columns as needed -->
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+  <div class="scroll-container" id="scroll-container">
+    <div class="scroll-content" id="scroll-content"></div>
+</div>
+
+<div id="productModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="productName"></h2>
+        <p id="productDescription"></p>
+        <p><strong>Price:</strong> ₹<span id="productPrice"></span></p>
+        <p><strong>Shipping:</strong> <span id="productShipping"></span></p>
+    </div>
+</div>
+
+<script>
+ 
+  function startScrolling() {
+    console.log('Start scrolling');
+    // Existing scrolling logic
+}
+
+function stopScrolling() {
+    console.log('Stop scrolling');
+    // Existing stop scrolling logic
+}
+
+  var products = [
+    {
+      category: "Coat & Jacket",
+      imageSrc: "https://imgmedia.lbb.in/media/2021/07/60e439aef150434328cdd7bf_1625569710689.webp",
+      name: "Midi Dress",
+      price: 2000,
+      description: "Stylish midi dress for all occasions.",
+      shipping: "5-7 business days"
+    },
+    {
+      category: "Coat & Jacket",
+      imageSrc: "https://media.phase-eight.com/image/upload/f_auto,q_auto,dpr_auto/p8-catalog/images/901019501/901019501-99-mariposa-peplum-jacket?_i=AG",
+      name: "Belted Single Breasted Trench Coat",
+      price: 2500,
+      description: "Stylish midi dress for all occasions.",
+      shipping: "5-7 business days"
+    },
+    {
+      category: "Coat & Jacket",
+      imageSrc: "https://n1.sdlcdn.com/imgs/b/i/b/Vaak-Black-Rayon-Dresses-SDL331836469-1-f609b.jpg",
+      name: "Rayon Dress",
+      price: 1500,
+      description: "Stylish midi dress for all occasions.",
+      shipping: "5-7 business days"
+    },
+    {
+      category: "Coat & Jacket",
+      imageSrc: "https://m.media-amazon.com/images/I/71tF9O0WgwL._SY879_.jpg",
+      name: "Midi Dress",
+      price: 1800,
+      description: "Soft rayon blend: this one-piece dress for women is made of a soft rayon blend material, featuring with floral printed beach dress for women.",
+      shipping: "5-7 business days"
+    }
+    
+  ];
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var scrollContainer = document.getElementById('scroll-container');
+    var scrollContent = document.getElementById('scroll-content');
+
+    products.forEach(function(product, index) {
+      var imgContainer = document.createElement('div');
+      imgContainer.classList.add('image-container');
+
+      var img = document.createElement('img');
+      img.src = product.imageSrc;
+      img.alt = product.name;
+      img.dataset.index = index;
+
+      var overlay = document.createElement('div');
+      overlay.classList.add('overlay');
+      overlay.innerHTML = `
+        <div class="overlay-content">
+          <i class="fa fa-eye" aria-hidden="true" onclick="showDetails(${index})"></i>
+          <button class="btn">Add to Cart</button>
+        </div>
+      `;
+
+      imgContainer.appendChild(img);
+      imgContainer.appendChild(overlay);
+      scrollContent.appendChild(imgContainer);
+    });
+
+    var scrollAnimation;
+    var scrollStep = 1;
+    var scrollPosition = 0;
+    var isScrolling = true;
+
+    function startScrolling() {
+      scrollAnimation = setInterval(function() {
+        scrollPosition -= scrollStep;
+        if (scrollPosition <= -scrollContent.scrollWidth / 2) {
+          scrollPosition = 0;
+        }
+        scrollContent.style.transform = 'translateX(' + scrollPosition + 'px)';
+      }, 20);
+    }
+
+    function stopScrolling() {
+      clearInterval(scrollAnimation);
+    }
+
+    window.showDetails = function(index) {
+      stopScrolling();
+      var product = products[index];
+      var modal = document.getElementById('productModal');
+      document.getElementById('productName').textContent = product.name;
+      document.getElementById('productDescription').textContent = product.description;
+      document.getElementById('productPrice').textContent = product.price;
+      document.getElementById('productShipping').textContent = product.shipping;
+      modal.style.display = 'block';
+    }
+
+    var closeModal = document.getElementsByClassName('close')[0];
+    closeModal.onclick = function() {
+      var modal = document.getElementById('productModal');
+      modal.style.display = 'none';
+      startScrolling();
+    }
+
+    window.onclick = function(event) {
+      var modal = document.getElementById('productModal');
+      if (event.target == modal) {
+        modal.style.display = 'none';
+        startScrolling();
+      }
+    }
+
+    startScrolling();
+  });
+
+</script>
+<div id="image-with-text-template--14252336775231__1641692626f76c920c" class="vela-section image-with-text overflow-hidden" style="">                                     
+  <div class="image-with-text__inner ">
+      <div class="container-full">
+          <div class="row g-0 justify-content-center">
+                  <div class=" col-12 col-md-6 col-xl-6"><div class="image-with-text__image position-relative">
+<div class="card_wrap">
+      <div class="card__image position-relative lazyload js" style="padding-top:84.16666666666669%;" role="img"
+      aria-label=""
+      data-alt=""
+      data-bgset="https://i.pinimg.com/564x/51/92/0f/51920f116e3e919f7ca26b2318413e4d.jpg"
+      data-sizes="auto">
+          <noscript><img class="img-fluid noscript" src="//vela-demo-2.myshopify.com/cdn/shop/files/vela-image64.jpg?v=1614748238" /></noscript><div  class="pre-loading position-absolute">
+  <span class="pre-loading__bar"></span>
+  <div class="vela-loading__icon"><span></span><span></span><span></span><span></span></div>
+</div></div>
+  </div>
+</div></div><div class=" image-with-text-content px-3 py-4 text-start col-12 col-md-6 col-xl-6">
+                  <div class="wrapper position-relative translate-middle-y top-50 fix-width"><div class="image-with-text__text--1 h3 ">Designed by Gurus</div><div class="image-with-text__text--2 text "><div style="display: inline-block; margin: 0 auto; line-height:0px; width: 70px; height: 2px; background: #fe5252;"></div></div><div class="image-with-text__text--3 text ">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta</div><a class="btn image-with-text__btn--4 border-2" href="/pages/about-us">MET OUR TEAMS</a></div>
+              </div>
+          </div>
+      </div>
+  </div>  
+</div>
+
+</div>
+<div id="image-with-text-template--14252336775231__1642161274af884a4a" class="vela-section image-with-text overflow-hidden" style="">                                     
+  <div class="image-with-text__inner ">
+      <div class="container-full">
+          <div class="row g-0 flex-row-reverse  justify-content-center">
+                  <div class=" col-12 col-md-6 col-xl-6"><div class="image-with-text__image position-relative">
+<div class="card_wrap">
+      <div class="card__image position-relative lazyload js" style="padding-top:84.16666666666669%;" role="img"
+      aria-label=""
+      data-alt=""
+      data-bgset="https://i.pinimg.com/564x/0a/55/c1/0a55c11855378dd2bf649d95799bee34.jpg"
+      data-sizes="auto">
+          <noscript><img class="img-fluid noscript" src="//vela-demo-2.myshopify.com/cdn/shop/files/vela-image63.jpg?v=1614748238" /></noscript><div  class="pre-loading position-absolute">
+</div></div>
+  </div>
+</div></div><div class=" image-with-text-content px-3 py-4 text-start col-12 col-md-6 col-xl-6">
+                  <div class="wrapper position-relative translate-middle-y top-50 float-md-end fix-width"><div class="image-with-text__text--1 h3 ">Top <span class="text-primary">10 brands</span> in UK</div><div class="image-with-text__text--2 text "><div style="display: inline-block; margin: 0 auto; line-height:0px; width: 70px; height: 2px; background: #fe5252;"></div></div><div class="image-with-text__text--3 text ">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta</div><a class="btn image-with-text__btn--4 border-2" href="/pages/about-us">MET OUR TEAMS</a></div>
+              </div>
+          </div>
+      </div>
+  </div>  
+</div>
+</div>
+
+<div class="container">
+  <div class="row g-3 g-md-4 row-cols-1 row-cols-ms-3 row-cols-md-3 row-cols-lg-3">
+      <div class="col">
+          <div class="image-with-text-content text-center" style="background-color: #5ec5e1; border: 1px solid #5ec5e1;">
+              <div class="services-box__content">
+                  <div class="services-desc" style="color: #ffffff; font-size: 22px;">
+                      Free UK Shipping
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col">
+          <div class="image-with-text-content text-center" style="background-color: #fd4545; border: 1px solid #fd4545; width: 200px;">
+              <div class="services-box__content">
+                  <div class="services-desc" style="color: #ffffff; font-size: 22px;">
+                      30 days exchange
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col">
+          <div class="image-with-text-content text-center" style="background-color: #ffffff; border: 1px solid #e5e5e5;">
+              <div class="services-box__content">
+                  <div class="services-desc" style="color: #000000; font-size: 22px;">
+                      Discount for students
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<div id="image-with-text-template" class="shopify-section">
+  <div class="image-with-text overflow-hidden" style="padding: 200px 0; margin: 0 0 30px; background-image: url('https://wallpaperaccess.com/full/318707.jpg'); background-position: center; background-size: cover;">
+      <div class="image-with-text__inner py-5">
+          <div class="container my-3">
+              <div class="row g-4 justify-content-center">
+                  <div class="image-with-text-content text-center col-12">
+                      <div class="wrapper position-relative translate-middle-y top-50">
+                          <div class="image-with-text__text--1 h3">We design our</div>
+                          <div class="image-with-text__text--2 h3">fashion You make them your styles</div>
+                          <div class="image-with-text__text--3 text"><div style="display: inline-block; margin: 0 auto; line-height:0px; width: 70px; height: 2px; background: #fff; "></div></div>
+                          <div class="image-with-text__text--4 text"><div style="max-width: 580px; margin: 0 auto;">
+                            We currently have limited clarity regarding clothes, as they have evolved over the centuries. Similarly, styles that appear unclear to us now will become more defined in the future."
+                          </div></div>
+                         </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="parent-box owl-carousel">
+  <div class="boxs">
+    <iframe width="290" height="300" src="https://www.youtube.com/embed/OkG5rQc-m9E"
+      frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+  <div class="boxs">
+    <iframe width="290" height="300" src="https://www.youtube.com/embed/Vuk87Ctr8Yg"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="boxs">
+    <iframe width="290" height="300" src="https://www.youtube.com/embed/BDuwKZcpJUE"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="boxs">
+    <iframe width="290" height="300" src="https://www.youtube.com/embed/QH6O7E9vWIQ"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="boxs">
+    <iframe width="290" height="300" src="https://www.youtube.com/embed/https://youtu.be/Fyx8e77kY2E?si=P9nS4x8W2MdN_cRP"
+        title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="boxs">
+    <iframe width="290" height="300" src="https://www.youtube.com/embed/Vuk87Ctr8Yg"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+</div>
+
+
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+{% endblock %}

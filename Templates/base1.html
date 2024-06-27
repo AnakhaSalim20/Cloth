@@ -1,0 +1,610 @@
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="theme-color" content="">
+<link rel="stylesheet" href="//vela-demo-2.myshopify.com/cdn/shop/t/4/assets/component-predictive-search.css?v=152580370784826015481642151672" media="print" onload="this.media='all'"><link href="//vela-demo-2.myshopify.com/cdn/shop/t/4/assets/bootstrap.css?v=182127510125710005861642997272" rel="stylesheet" type="text/css" media="all" />
+<link href="//vela-demo-2.myshopify.com/cdn/shop/t/4/assets/theme.css?v=99425242137070151131642997269" rel="stylesheet" type="text/css" media="all" />	
+<link href="//vela-demo-2.myshopify.com/cdn/shop/t/4/assets/vendor.css?v=16871426716420721791642151724" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">		
+<script>
+</script>
+<style>
+    .nav-icons {
+    display: flex;
+    align-items: center;
+    margin-left: 660px; 
+
+}
+
+.icon {
+    margin-left: 20px;
+    position: relative;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+}
+
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+    .menu-dropdown__content {
+    background-color: white; /* Set the background color to white */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for depth */
+    padding: 20px; /* Optional: Add padding for better spacing */
+}
+
+.menu-dropdown__content--megamenu {
+    background-color: white; /* Set the background color to white */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for depth */
+    padding: 20px; /* Optional: Add padding for better spacing */
+}
+
+.cart-icon {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1001;
+            color: #000;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .cart-container {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #f8f9fa;
+            padding: 15px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        .cart-container h4 {
+            margin-bottom: 10px;
+        }
+        .cart-container p {
+            margin-bottom: 5px;
+        }
+        .cart-container button {
+            margin-top: 7px;
+        }
+</style>
+        <div id="menu-drawer" class="menu-drawer motion-reduce" tabindex="-1">
+            <div class="menu-drawer__inner-container">
+                <div class="menu-drawer__navigation-container d-flex align-items-start flex-column h-100">
+                    <nav class="menu-drawer__navigation mb-auto w-100">
+                        <ul class="menu-drawer__menu list-menu" ><li><details>
+                                                <summary class="menu-drawer__menu-item list-menu__item">
+                                                Home
+                                                <svg  class="icon icon-arrow"  viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor" />
+    </svg>
+                                                </summary>
+                                                <div id="link-Home" class="menu-drawer__submenu motion-reduce" tabindex="-1">
+                                                    <div class="menu-drawer__inner-submenu">
+                                                        <button class="menu-drawer__close-button border-0 btn-secondary" aria-expanded="true">
+                                                            <svg  class="icon icon-arrow"  viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor" />
+    </svg>
+                                                            Home
+                                                        </button>
+                                                        <ul class="menu-drawer__menu list-menu"  tabindex="-1"><li><a href="https://vela-demo-1.myshopify.com/?_ab=0&_fd=0&_sc=1&preview_theme_id=121555157034" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                            Manor Home 1
+F                                                                        </a></li><li><a href="https://vela-demo-1.myshopify.com/?_ab=0&_fd=0&_sc=1&preview_theme_id=121749438506" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                            Manor Home 2
+                                                                        </a></li><li><a href="https://vela-demo-1.myshopify.com/?_ab=0&_fd=0&_sc=1&preview_theme_id=121766182954" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                            Manor Home 3
+                                                                        </a></li><li><a href="https://vela-demo-1.myshopify.com/?_ab=0&_fd=0&_sc=1&preview_theme_id=121791774762" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                            Manor Home 4
+                                                                        </a></li><li><a href="https://vela-demo-1.myshopify.com/?_ab=0&_fd=0&_sc=1&preview_theme_id=121769492522" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                            Manor Home 5
+                                                                        </a></li><li><a href="https://vela-demo-1.myshopify.com/?_ab=0&_fd=0&_sc=1&preview_theme_id=121551781930" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                            Manor Home 6
+                                                                        </a></li><li><a href="https://vela-demo-1.myshopify.com/?_ab=0&_fd=0&_sc=1&preview_theme_id=121653461034" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                            Manor Home 7
+                                                                        </a></li><li><a href="https://vela-demo-1.myshopify.com/?_ab=0&_fd=0&_sc=1&preview_theme_id=121668993066" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                            Manor Home 8
+                                                                        </a></li><li><a href="https://vela-demo-1.myshopify.com/?_ab=0&_fd=0&_sc=1&preview_theme_id=121654181930" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                            Manor Home 9
+                                                                        </a></li><li><a href="https://vela-demo-2.myshopify.com/?_ab=0&_fd=0&_sc=1&preview_theme_id=120772460607" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                            Manor Home 10
+                                                                        </a></li></ul>
+                                                    </div>
+                                                    </div>
+                                            </details></li><li><details>
+                                                <summary class="menu-drawer__menu-item list-menu__item">
+                                                Shops
+                                                <svg  class="icon icon-arrow"  viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor" />
+    </svg>
+                                                </summary>
+                                                <div id="link-Shops" class="menu-drawer__submenu motion-reduce" tabindex="-1">
+                                                    <div class="menu-drawer__inner-submenu">
+                                                        <button class="menu-drawer__close-button border-0 btn-secondary" aria-expanded="true">
+                                                            <svg  class="icon icon-arrow"  viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor" />
+    </svg>
+                                                            Shops
+                                                        </button>
+                                                        <ul class="menu-drawer__menu list-menu"  tabindex="-1"><li><details>
+                                                                                <summary class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                                    Shop page
+                                                                                    <svg  class="icon icon-arrow"  viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor" />
+    </svg>
+                                                                                </summary>
+                                                                                <div id="childlink-shop-page" class="menu-drawer__submenu motion-reduce">
+                                                                                    <button class="menu-drawer__close-button border-0 btn-secondary" aria-expanded="true">
+                                                                                    <svg  class="icon icon-arrow"  viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor" />
+    </svg>
+                                                                                    Shop page
+                                                                                    </button>
+                                                                                    <ul class="menu-drawer__menu list-menu"  tabindex="-1"><li>
+                                                                                        <a href="/collections/all?view=full-width" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                                            Fullwidth
+                                                                                        </a>
+                                                                                        </li><li>
+                                                                                        <a href="/collections/all?view=no-filter" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                                            Fullwidth - No filter
+                                                                                        </a>
+                                                                                        </li><li>
+                                                                                        <a href="/collections/all?view=left-sidebar" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                                            Left sidebar
+                                                                                        </a>
+                                                                                        </li><li>
+                                                                                        <a href="/collections/all?view=right-sidebar" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                                            Right sidebar
+                                                                                        </a>
+                                                                                        </li><li>
+                                                                                        <a href="/collections/all?view=filter-top" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                                            Filter top
+                                                                                        </a>
+                                                                                        </li><li>
+                                                                                        <a href="/collections/all?view=pagination" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                                            Pagination
+                                                                                        </a>
+                                                                                        </li><li>
+                                                                                        <a href="/collections/all?view=loadmore" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                                            Load more
+                                                                                        </a>
+                                                                                        </li></ul>
+                                                                                </div>
+                                                                            </details></li><li><details>
+                                                                                <summary class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                                    Product page
+                                                                                    <svg  class="icon icon-arrow"  viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor" />
+    </svg>
+                                                                                </summary>
+                                                                                <div id="childlink-product-page" class="menu-drawer__submenu motion-reduce">
+                                                                                    <button class="menu-drawer__close-button border-0 btn-secondary" aria-expanded="true">
+                                                                                    <svg  class="icon icon-arrow"  viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor" />
+    </svg>
+                                                                                    Product page
+                                                                                    </button>
+                                                                                    <ul class="menu-drawer__menu list-menu"  tabindex="-1"><li>
+                                                                                        <a href="/products/ageratum-t-shirt?view=thumbnail-left" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                                            Product thumbnail left
+                                                                                        </a>
+                                                                                        </li><li>
+                                                                                        <a href="/products/ageratum-t-shirt?view=thumbnail-right" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                                            Product thumbnail right
+                                                                                        </a>
+                                                                                        </li><li>
+                                                                                        <a href="/products/ageratum-t-shirt?view=thumbnail-top" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                                            Product thumbnail top
+                                                                                        </a>
+                                                                                        </li><li>
+                                                                                        <a href="/products/ageratum-t-shirt?view=thumbnail-bottom" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                                            Product thumbnail bottom
+                                                                                        </a>
+                                                                                        </li><li>
+                                                                                        <a href="/products/ageratum-t-shirt" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                                            Product variants
+                                                                                        </a>
+                                                                                        </li><li>
+                                                                                        <a href="/products/ageratum-t-shirt?view=dropdown-variant" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                                            Product variants dropdown
+                                                                                        </a>
+                                                                                        </li><li>
+                                                                                        <a href="/products/ana-wallet-on-a-strap" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                                            Product Video,3D, AR models
+                                                                                        </a>
+                                                                                        </li><li>
+                                                                                        <a href="/products/ageratum-t-shirt?view=gallery-stacked" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                                            Product gallery stacked
+                                                                                        </a>
+                                                                                        </li></ul>
+                                                                                </div>
+                                                                            </details></li></ul>
+                                                    </div>
+                                                    </div>
+                                            </details></li><li><a href="/collections" class="menu-drawer__menu-item list-menu__item">
+                                                Collections
+                                            </a></li><li><details>
+                                                <summary class="menu-drawer__menu-item list-menu__item">
+                                                Blog
+                                                <svg  class="icon icon-arrow"  viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor" />
+    </svg>
+                                                </summary>
+                                                <div id="link-Blog" class="menu-drawer__submenu motion-reduce" tabindex="-1">
+                                                    <div class="menu-drawer__inner-submenu">
+                                                        <button class="menu-drawer__close-button border-0 btn-secondary" aria-expanded="true">
+                                                            <svg  class="icon icon-arrow"  viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor" />
+    </svg>
+                                                            Blog
+                                                        </button>
+                                                        <ul class="menu-drawer__menu list-menu"  tabindex="-1"><li><a href="/blogs/news" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                            Blog right sidebar
+                                                                        </a></li><li><a href="/blogs/news?view=sidebar-left" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                            Blog left sidebar
+                                                                        </a></li><li><a href="/blogs/news?view=full-width" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                            Blog fullwidth
+                                                                        </a></li><li><a href="/search?view=blog&type=article&q=a" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                            Blog search
+                                                                        </a></li><li><a href="/blogs/news/accessories-for-both-him-her-some-suggestions" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                            Blog post sidebar
+                                                                        </a></li><li><a href="/blogs/news/lightly-dress-you-may-not-know-how-to-wear?view=full-width" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                            Blog post no sidebar
+                                                                        </a></li></ul>
+                                                    </div>
+                                                    </div>
+                                            </details></li><li><details>
+                                                <summary class="menu-drawer__menu-item list-menu__item">
+                                                Pages
+                                                <svg  class="icon icon-arrow"  viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor" />
+    </svg>
+                                                </summary>
+                                                <div id="link-Pages" class="menu-drawer__submenu motion-reduce" tabindex="-1">
+                                                    <div class="menu-drawer__inner-submenu">
+                                                        <button class="menu-drawer__close-button border-0 btn-secondary" aria-expanded="true">
+                                                            <svg  class="icon icon-arrow"  viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor" />
+    </svg>
+                                                            Pages
+                                                        </button>
+                                                        <ul class="menu-drawer__menu list-menu"  tabindex="-1"><li><a href="/pages/about-us" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                            About us
+                                                                        </a></li><li><a href="/pages/faqs" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                            F.A.Qs page
+                                                                        </a></li><li><a href="/pages/lookbook" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                            Lookbook page
+                                                                        </a></li><li><a href="/pages/404-page" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                            404 page
+                                                                        </a></li><li><a href="/pages/password" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                            Password page
+                                                                        </a></li><li><a href="/pages/sitemap" class="menu-drawer__menu-item list-menu__item focus-inset">
+                                                                            Sitemap page
+                                                                        </a></li></ul>
+                                                    </div>
+                                                    </div>
+                                            </details></li><li><a href="/pages/contact-us" class="menu-drawer__menu-item list-menu__item">
+                                                Contact
+                                            </a></li></ul>
+                    </nav>
+                    <div class="menu-drawer__utility-links w-100"><a href="/account" class="menu-drawer__account btn btn-secondary  d-block text-uppercase">Account</a></div>
+                </div>
+            </div>
+        </div>
+    </details>
+</header-drawer></div>
+					<div class="header-center col d-none d-lg-block"><div class="main-menu">
+	<nav class="main-menu__wrap">
+		<ul class="main-menu__nav list-unstyled d-flex flex-wrap m-0 justify-content-center">
+					<li class="main-menu__nav-item menu-dropdown menu-dropdown--basic active">
+						<a href="/" title="Home">Home <svg  class="ms-1" width="10px" height="15px" aria-hidden="true" focusable="false" role="presentation" viewBox="0 0 10 6">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor" />
+  </svg></a>
+						<ul class="menu-dropdown__content list-unstyled"><li class="">
+										<a  class="main-menu__link" href="" title="Manor Home 1">Manor Home 1</a>
+									</li><!--<li class="">
+										<a  class="main-menu__link" href="" title="Manor Home 2">Manor Home 2</a>
+									</li><li class="">
+										<a  class="main-menu__link" href="" title="Manor Home 3">Manor Home 3</a>
+									</li><li class="">
+										<a  class="main-menu__link" href="" title="Manor Home 4">Manor Home 4</a>
+									</li><li class="">
+										<a  class="main-menu__link" href="" title="Manor Home 5">Manor Home 5</a>
+									</li><li class="">
+										<a  class="main-menu__link" href="" title="Manor Home 6">Manor Home 6</a>
+									</li><li class="">
+										<a  class="main-menu__link" href="" title="Manor Home 7">Manor Home 7</a>
+									</li><li class="">
+										<a  class="main-menu__link" href="" title="Manor Home 8">Manor Home 8</a>
+									</li><li class="">
+										<a  class="main-menu__link" href="" title="Manor Home 9">Manor Home 9</a>
+									</li><li class="">
+										<a  class="main-menu__link" href="" title="Manor Home 10">Manor Home 10</a>
+									</li>--></ul>
+					</li><li class="main-menu__nav-item menu-dropdown">
+	<a href="/collections/all" title="Shops">Shops <svg  class="ms-1" width="10px" height="15px" aria-hidden="true" focusable="false" role="presentation" viewBox="0 0 10 6">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor" />
+  </svg></a>
+	<div class="menu-dropdown__content menu-dropdown__content--megamenu mx-auto start-0 end-0" style="max-width: 1200px">
+		<div class="menu-row row"><div class="menu-row__col menu-row__col--50" style="order: 2">
+					<div class="menu-row row"><div class="menu-row__col menu-row__col--50 mb-3">
+							<ul class="megamenu-links list-unstyled">
+								<li class="megamenu-links__item megamenu-heading mb-3">
+									<span>Shop page</span>
+								</li><li class="megamenu-links__item">
+										<a class="megamenu-links__link main-menu__link" href="/collections/all?view=full-width" title="Fullwidth">Fullwidth</a>
+									</li><li class="megamenu-links__item">
+										<a class="megamenu-links__link main-menu__link" href="/collections/all?view=no-filter" title="Fullwidth - No filter">Fullwidth - No filter</a>
+									</li><li class="megamenu-links__item">
+										<a class="megamenu-links__link main-menu__link" href="/collections/all?view=left-sidebar" title="Left sidebar">Left sidebar</a>
+									</li><li class="megamenu-links__item">
+										<a class="megamenu-links__link main-menu__link" href="/collections/all?view=right-sidebar" title="Right sidebar">Right sidebar</a>
+									</li><li class="megamenu-links__item">
+										<a class="megamenu-links__link main-menu__link" href="/collections/all?view=filter-top" title="Filter top">Filter top</a>
+									</li><li class="megamenu-links__item">
+										<a class="megamenu-links__link main-menu__link" href="/collections/all?view=pagination" title="Pagination">Pagination</a>
+									</li><li class="megamenu-links__item">
+										<a class="megamenu-links__link main-menu__link" href="/collections/all?view=loadmore" title="Load more">Load more</a>
+									</li></ul>
+						</div><div class="menu-row__col menu-row__col--50 mb-3">
+							<ul class="megamenu-links list-unstyled">
+								<li class="megamenu-links__item megamenu-heading mb-3">
+									<span>Product page</span>
+								</li><li class="megamenu-links__item">
+										<a class="megamenu-links__link main-menu__link" href="/products/ageratum-t-shirt?view=thumbnail-left" title="Product thumbnail left">Product thumbnail left</a>
+									</li><li class="megamenu-links__item">
+										<a class="megamenu-links__link main-menu__link" href="/products/ageratum-t-shirt?view=thumbnail-right" title="Product thumbnail right">Product thumbnail right</a>
+									</li><li class="megamenu-links__item">
+										<a class="megamenu-links__link main-menu__link" href="/products/ageratum-t-shirt?view=thumbnail-top" title="Product thumbnail top">Product thumbnail top</a>
+									</li><li class="megamenu-links__item">
+										<a class="megamenu-links__link main-menu__link" href="/products/ageratum-t-shirt?view=thumbnail-bottom" title="Product thumbnail bottom">Product thumbnail bottom</a>
+									</li><li class="megamenu-links__item">
+										<a class="megamenu-links__link main-menu__link" href="/products/ageratum-t-shirt" title="Product variants">Product variants</a>
+									</li><li class="megamenu-links__item">
+										<a class="megamenu-links__link main-menu__link" href="/products/ageratum-t-shirt?view=dropdown-variant" title="Product variants dropdown">Product variants dropdown</a>
+									</li><li class="megamenu-links__item">
+										<a class="megamenu-links__link main-menu__link" href="/products/ana-wallet-on-a-strap" title="Product Video,3D, AR models">Product Video,3D, AR models</a>
+									</li><li class="megamenu-links__item">
+										<a class="megamenu-links__link main-menu__link" href="/products/ageratum-t-shirt?view=gallery-stacked" title="Product gallery stacked">Product gallery stacked</a>
+									</li></ul>
+						</div></div>
+				</div><div class="menu-row__col menu-row__col--25 mb-3" style="order: 3;"><div class="megamenu-products"><div class="megamenu-products__heading megamenu-heading">
+                <!----   <span>New products</span>-->
+                </div><div class="megamenu-products__list pt-3"><div class="product-menu pb-3">
+							<div class="product-menu__image">
+								<!--<a class="product-menu__image-link" href="/products/hexagon-push-lock-sling-bag" title="">
+									<img class="img-fluid" src="//vela-demo-2.myshopify.com/cdn/shop/products/9_90x100_crop_center.jpg?v=1521465807" alt="Hexagon Push-Lock Sling Bag"/>
+                                --></a>
+							</div>
+							<div class="product-menu__content">
+								<div class="product-menu__name">
+						<!----		<a class="h6 p-0" href="/products/hexagon-push-lock-sling-bag" title="Hexagon Push-Lock Sling Bag">Hexagon Push-Lock Sling Bag</a>-->
+								</div><div class="product-card__review product-menu__review mb-1">
+										<span class="shopify-product-reviews-badge" data-id="556152324159"></span>
+									</div><div class="product-menu__price">
+									<!--<span class="product-price"><span class=money>$47.90</span></span>
+										<span class="product-price product-price--regular"><span class=money>$59.90</span></span>
+                                    -->		</div>
+							</div>
+						</div><div class="product-menu pb-3">
+							<div class="product-menu__image">
+								<a class="product-menu__image-link" href="/products/jean-body-curve" title="">
+							<!---		<img class="img-fluid" src="//vela-demo-2.myshopify.com/cdn/shop/products/10_90x100_crop_center.jpg?v=1521465809" alt="Jean Body Curve"/>
+                                --></a>
+							</div>
+							<div class="product-menu__content">
+								<div class="product-menu__name">
+								<!----	<a class="h6 p-0" href="/products/jean-body-curve" title="Jean Body Curve">Jean Body Curve</a>
+								</div><div class="product-card__review product-menu__review mb-1">
+										<span class="shopify-product-reviews-badge" data-id="556152258623"></span>
+									</div><div class="product-menu__price">
+									<span class="product-price"><span class=money>$29.99</span></span>	
+								</div>
+							</div>-->
+						</div><div class="product-menu pb-3">
+							<div class="product-menu__image">
+								<a class="product-menu__image-link" href="/products/kerwynn-t-shirt" title="">
+									<!--<img class="img-fluid" src="//vela-demo-2.myshopify.com/cdn/shop/products/11_90x100_crop_center.jpg?v=1521465815" alt="Kerwynn T-shirt"/>
+                                -->	</a>
+							</div>
+							<div class="product-menu__content">
+								<!--<div class="product-menu__name">
+									<a class="h6 p-0" href="/products/kerwynn-t-shirt" title="Kerwynn T-shirt">Kerwynn T-shirt</a>
+								</div><div class="product-card__review product-menu__review mb-1">
+										<span class="shopify-product-reviews-badge" data-id="556151832639"></span>
+									</div><div class="product-menu__price">
+									<span class="product-price"><span class=money>$14.99</span></span>									
+								</div>
+							</div>-->
+						</div></div>
+				</div>
+				</div><div class="menu-row__col menu-row__col--25 mb-4" style="order: 4;">
+					<div class="megamenu-banner">
+				<!----		<a href=""><img class="img-fluid" alt="Velatheme" src="" /></a>-->
+					</div>
+				</div></div>
+	</div>
+</li>
+<li class="main-menu__nav-item menu-dropdown">
+	<a href="/collect" title="Collections">Collections <svg  class="ms-1" width="10px" height="15px" aria-hidden="true" focusable="false" role="presentation" viewBox="0 0 10 6">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor" />
+  </svg></a>
+	<div class="menu-dropdown__content menu-dropdown__content--megamenu mx-auto start-0 end-0" style="max-width: 1200px">
+		<div class="menu-row row"><div class="menu-row__col menu-row__col--100 mb-4" style="order: 3;"><div class="megamenu-html"><div class="megamenu-html__content"><div class="pt-4" style="border-top: 1px solid #e5e5e5;">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultrices suscipit suscipit. Aliquam porta, augue eget imperdiet varius, lectus purus faucibus arcu, vel facilisis erat mauris quis nisi. Proin ac consequat augue. Suspendisse viverra lobortis risus, eu sagittis enim fringilla quis. Donec non nisl in dui iaculis sagittis
+</div></div>
+				</div>
+				</div><div class="megamenu-collection-list menu-row__col menu-row__col--100" style="order: 1;">
+					<div class="menu-row row">
+								<div class="menu-row__col menu-row__col--20 mb-4">
+									<div class="collImage mb-3">
+										<a class="d-block overflow-hidden" href="/collect/bag">
+<div class="card_wrap">
+        <div class="card__image position-relative lazyload js" style="padding-top:125.0%;" role="img"
+        aria-label="Bags"
+        data-alt="Bags"
+        data-bgset="https://i.pinimg.com/474x/41/63/c3/4163c311688550a9995e110c0226040a.jpg"
+        data-sizes="auto">
+            <noscript><img class="img-fluid noscript" src="//vela-demo-2.myshopify.com/cdn/shop/collections/1.jpg?v=1521267585" /></noscript><div  class="pre-loading position-absolute">
+    <span class="pre-loading__bar"></span>
+    <div class="vela-loading__icon"><span></span><span></span><span></span><span></span></div>
+</div></div></div></a></div>
+									<h5 class="collTitle mb-0 text-center"><a href="/collect/bag" title="Bags"> Bags</a></h5>											
+								</div>
+				<div class="menu-row__col menu-row__col--20 mb-4">
+									<div class="collImage mb-3">
+										<a class="d-block overflow-hidden" href="/collect/bag">
+<div class="card_wrap">
+        <div class="card__image position-relative lazyload js" style="padding-top:125.0%;" role="img"
+        aria-label="Denim"
+        data-alt="Denim"
+        data-bgset="https://i.pinimg.com/736x/67/c8/58/67c8584884ae59c7faec5b7c70dbfe6b.jpg"
+        data-sizes="auto">
+            <noscript><img class="img-fluid noscript" src="//vela-demo-2.myshopify.com/cdn/shop/collections/7.jpg?v=1521267690" /></noscript><div  class="pre-loading position-absolute">
+    <span class="pre-loading__bar"></span>
+    <div class="vela-loading__icon"><span></span><span></span><span></span><span></span></div>
+</div></div></div></a></div>
+									<h5 class="collTitle mb-0 text-center"><a href="/collect/bag" title="Denim"> Denim</a></h5>											
+								</div><div class="menu-row__col menu-row__col--20 mb-4">
+									<div class="collImage mb-3">
+										<a class="d-block overflow-hidden" href="/collect/bag">
+<div class="card_wrap">
+        <div class="card__image position-relative lazyload js" style="padding-top:125.0%;" role="img"
+        aria-label="Dress"
+        data-alt="Dress"
+        data-bgset="https://d3l45txiponal6.cloudfront.net/sites/files/willow/images/products/202401/800x1200/thalia_sand_04.jpg"
+        data-sizes="auto">
+            <noscript><img class="img-fluid noscript" src="//vela-demo-2.myshopify.com/cdn/shop/collections/6.jpg?v=1521267683" /></noscript><div  class="pre-loading position-absolute">
+    <span class="pre-loading__bar"></span>
+    <div class="vela-loading__icon"><span></span><span></span><span></span><span></span></div>
+</div></div></div></a></div>
+									<h5 class="collTitle mb-0 text-center"><a href="/collect/bag" title="Dress"> Dress</a></h5>											
+								</div>
+								<div class="menu-row__col menu-row__col--20 mb-4">
+									<div class="collImage mb-3">
+										<a class="d-block overflow-hidden" href="/collect/bag">
+<div class="card_wrap">
+        <div class="card__image position-relative lazyload js" style="padding-top:125.0%;" role="img"
+        aria-label="Shoes"
+        data-alt="Shoes"
+        data-bgset="https://gloimg.rglcdn.com/rosegal/pdm-product-pic/Clothing/2016/11/17/source-img/20161117170140_15355.jpg"
+        data-sizes="auto">
+            <noscript><img class="img-fluid noscript" src="//vela-demo-2.myshopify.com/cdn/shop/collections/5.jpg?v=1521267657" /></noscript><div  class="pre-loading position-absolute">
+    <span class="pre-loading__bar"></span>
+    <div class="vela-loading__icon"><span></span><span></span><span></span><span></span></div>
+</div></div></div></a>	</div>
+									<h5 class="collTitle mb-0 text-center"><a href="/collect/bag" title="Shoes"> Shoes</a></h5>											
+								</div>
+								<div class="menu-row__col menu-row__col--20 mb-4">
+									<div class="collImage mb-3">
+										<a class="d-block overflow-hidden" href="/collect/bag">
+<div class="card_wrap">
+        <div class="card__image position-relative lazyload js" style="padding-top:125.0%;" role="img"
+        aria-label="T-Shirts"
+        data-alt="T-Shirts"
+        data-bgset="https://th.bing.com/th/id/OIP.DBEaRUmseWou2bYYYIm7egHaJQ?w=640&h=800&rs=1&pid=ImgDetMain"
+        data-sizes="auto">
+            <noscript><img class="img-fluid noscript" src="//vela-demo-2.myshopify.com/cdn/shop/collections/3.jpg?v=1521267640" /></noscript><div  class="pre-loading position-absolute">
+    <span class="pre-loading__bar"></span>
+    <div class="vela-loading__icon"><span></span><span></span><span></span><span></span></div>
+</div></div>
+    </div>
+</a>
+						</div>
+									<h5 class="collTitle mb-0 text-center"><a href="/collect/bag" title="T-Shirts"> T-Shirts</a></h5>											
+								</div>									
+					</div>
+				</div></div>
+	</div>
+</li>
+<div class="nav-icons">
+    <a href="#" class="icon">
+        <i class="fa fa-search"></i>
+    </a>
+ 
+    <div class="profile-dropdown">
+        <a href="#" class="icon">
+            <i class="fas fa-user-alt"></i>
+        </a>
+        <div class="dropdown-content">
+            <a href="/login/">Login</a>
+            <a href="/signup/">Register</a>
+        </div>
+       <a href="/cart" class="cart-icon">
+            <i class="fas fa-cart-plus"></i>
+        </a>
+    
+    </div>
+</div>
+</div>
+  </nav>
+</div></div>	
+
+<!-- Main Content -->
+{% block content %}
+{% endblock %}
+<!-- Footer -->
+<footer class="footer footer-custom mt-5">
+  <div class="row">
+    <div class="col-md-4">
+      <h3 class="bold-heading">Newsletter</h3>
+      <p>Make sure that you're always the first who receive our latest news and promotions</p>
+      <div class="news__form">
+        <input type="email" placeholder="Enter your email address" />
+        <button class="news__btn">Message</button>
+      </div>
+    </div>
+    <div class="col-md-4">
+        <h3 class="bold-heading">Contact Us</h3>
+        <p>Address</p>
+      <p>Email: info@example.com<br>Phone: +123456789</p>
+    </div>
+    <div class="col-md-4">
+      <h3 class="bold-heading">Support</h3>
+      <p>For any assistance, reach out to our support team.</p>
+      <div class="container2">
+        <a href="ship">Shipping & Return</a><br>
+        <a href="privacy-policy">Our Policy</a><br>
+        <a href="terms">Terms & Conditions</a><br>
+        <a href="faq">F.A.Qs</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- JavaScript and Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="//vela-demo-2.myshopify.com/cdn/shop/t/4/assets/lazysizes.min.js?v=155223123402716617051642151679" async="async"></script>
+</script>
+</body>
+</html>

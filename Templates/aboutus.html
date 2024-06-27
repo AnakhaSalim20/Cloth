@@ -1,0 +1,181 @@
+{% extends 'base1.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .full-width-img {
+            width: 100%;
+            height: 300px; /* Adjust height as needed */
+            position: relative;
+            background: url('http://127.0.0.1:8000/static/images/dress.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .overlay-text {
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .section-gap {
+            margin-top: 60px;
+        }
+        .big-red-quote {
+            font-size: 3rem;
+            color: red;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .centered-text {
+            text-align: center;
+            font-size: 1.25rem;
+        }
+        .contact-button, .work-button {
+            background-color: black;
+            color: white;
+        }
+        .our-services-title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.75rem;
+            margin-top: 60px;
+            margin-bottom: 40px;
+        }
+        .card {
+            border: 1px solid #e5e5e5;
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+        .card-text {
+            font-size: 0.9rem;
+        }
+        .team-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .team-section p {
+            margin-bottom: 40px;
+        }
+        .team-images img {
+            margin-bottom: 20px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Full Width Image with Overlay Text -->
+    <div class="full-width-img">
+        <div class="overlay-text">About Us</div>
+    </div>
+
+    <div class="container section-gap">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="http://127.0.0.1:8000/static/images/about.jpg" alt="Our Story Image" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <h3>Our Story</h3>
+                <p>Lorem Khaled Ipsum is a major key to success. We the best. Celebrate success right, the only way, apple. Lorem Khaled Ipsum is a major key to success. We the best. Celebrate success right, the only way, apple.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container section-gap">
+        <div class="our-services-title">Our Services</div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">01. Sell fashion products</h5>
+                        <p class="card-text">Lorem Khaled Ipsum is a major key to success. We the best. Celebrate success right, the only way, apple.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">02. Custom works</h5>
+                        <p class="card-text">Lorem Khaled Ipsum is a major key to success. We the best. Celebrate success right, the only way, apple.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">03. Worldwide delivery</h5>
+                        <p class="card-text">Lorem Khaled Ipsum is a major key to success. We the best. Celebrate success right, the only way, apple.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container section-gap">
+        <p class="big-red-quote">“</p>
+        <p class="centered-text">We’re just a small fashion store but we come to the</p>
+            <p class="centered-text">world just to make it better, bring the fashion and </p>
+                <p class="centered-text"> to everyone</p>
+    </div>
+
+    <div class="container section-gap">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5>Contact Us</h5>
+                        <p>Lorem Khaled Ipsum is a major key to success. Congratulations, you played yourself. Cloth talk. You do know, you do know that they don’t want you to have lunch.</p>
+                        <button class="btn contact-button">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 style="font-size: 1.5rem;">Work with Us</h5>
+                        <p>Congratulations, you played yourself. Cloth talk. You do know, you do know that they don’t want you to have lunch.</p>
+                        <button class="btn work-button">Work with Us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container team-section">
+        <h2 class="our-services-title">Meet Our Team</h2>
+        <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica.</p>
+        <div class="row team-images">
+            <div class="col-md-3"><img src="https://via.placeholder.com/150" alt="Team Member" class="img-fluid"></div>
+            <div class="col-md-3"><img src="https://via.placeholder.com/150" alt="Team Member" class="img-fluid"></div>
+            <div class="col-md-3"><img src="https://via.placeholder.com/150" alt="Team Member" class="img-fluid"></div>
+            <div class="col-md-3"><img src="https://via.placeholder.com/150" alt="Team Member" class="img-fluid"></div>
+        </div>
+        <div class="row team-images mt-4">
+            <div class="col-md-3"><img src="https://via.placeholder.com/150" alt="Team Member" class="img-fluid"></div>
+            <div class="col-md-3"><img src="https://via.placeholder.com/150" alt="Team Member" class="img-fluid"></div>
+            <div class="col-md-3"><img src="https://via.placeholder.com/150" alt="Team Member" class="img-fluid"></div>
+            <div class="col-md-3"><img src="https://via.placeholder.com/150" alt="Team Member" class="img-fluid"></div>
+        </div>
+    </div>
+
+</body>
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</html>
+{% endblock %}

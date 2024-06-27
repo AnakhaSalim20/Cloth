@@ -1,0 +1,47 @@
+{% extends 'base1.html' %}
+
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .privacy-policy {
+        margin-top: 4em; /* Adjust as needed */
+        text-align: center;
+        color: black;
+        font-weight: bold;
+    }
+
+    /* Add styling for privacy content */
+    .privacy-content {
+        text-align: center;
+        margin: 0 auto;
+        width: 70%;
+        line-height: 1.6;
+        margin-top: 2em;
+    }
+  
+</style>
+</head>
+<body>
+  <div class="privacy-policy">
+    <h1>Privacy Policy</h1>
+  </div>
+  <div class="privacy-content">
+    <p>We use tracking pixels, cookies, and other technologies to collect and store certain information, such as your IP address, browser details, Internet Service Provider (ISP), operating system, date and time of your visit, and the links you click on. This information helps us personalize your experience on our website and make our marketing messages more relevant to you. It also allows us to keep items in your cart between visits and show you our content on other websites or apps. Additionally, we use this information to analyze how you use our website, evaluate the performance of our marketing efforts, and understand your reactions to those efforts.</p>
+  </div>
+</body>
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</html>
+{% endblock %}

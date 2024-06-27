@@ -1,0 +1,31 @@
+{% extends 'base1.html' %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shops</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Shops</h1>
+        <div class="row">
+            {% for shop in shops %}
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="{{ shop.image.url }}" alt="{{ shop.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ shop.name }}</h5>
+                        <p class="card-text">{{ shop.description }}</p>
+                        <a href="{% url 'shop_detail' shop.id %}" class="btn btn-primary">View Shop</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}
